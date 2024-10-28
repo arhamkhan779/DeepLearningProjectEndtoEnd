@@ -18,3 +18,14 @@ class PrepareBaseModelConfig:
     params_include_top:bool
     params_weight:str
     params_classes:int
+
+@dataclass(frozen=True)
+class TrainingConfig:
+    root_dir:Path
+    trained_model_path: Path
+    update_base_model_path: Path
+    training_data: Path
+    params_epoch: int
+    params_batch_size: int
+    params_is_augmentation: bool
+    params_img_size: list
